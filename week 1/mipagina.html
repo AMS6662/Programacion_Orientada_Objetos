@@ -1,7 +1,7 @@
 <html>
 <h1> Mi juego de mario bros </h1>
 <p> Cantidad de vidas: </p>
-<button> Daño </button>
+<button onClick= "dano()" >Daño</button>
 </html>
 
 <script>
@@ -10,4 +10,12 @@ let vidas = 3
 const vidasTexto = document.querySelector('p')
 
 vidasTexto.textContent += vidas
+
+
+function dano(){
+vidas -= 1;
+vidasTexto.textContent += vidas
+
+}
+
 </script>
