@@ -32,4 +32,15 @@ Estos atributos y comportamientos se pueden traducir a variables definidad, depe
 7. bool Belleza = True -> Puede ayudar a ser sigilosa.
 
 ## Definicón de comportamientos
+Además de los comportamientos positivos, o habilidades del objeto, también se crean comportamientos que lo afecten de manera negativa o que lo hagan sentirse en peligro.
+1. Salud
+2. Vida
+3. Romance
+Ambos comportamientos están definidos por puntos.
+1. Disminución de vida
+2. Disminución de velocidad
+4. Escudo
+5. Resistencia
+Los primeros dos comportamientos le quitan puntos. Los segundos dos le aumentan o devuelven puntos o ayudan a que no dismunuyan tan rápido.
+
 
