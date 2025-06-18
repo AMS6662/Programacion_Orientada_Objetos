@@ -22,3 +22,7 @@ Su comportamiento es:
 Ser comido
 
 - Herencia
+Todos los objetos tipo _tamal_ tendrán las mismas características y comportamientos de estos:
+1. Tamal de dulce
+2. Tamal de rajas.
+Aunque son diferentes tipos de tamales, heredan las características del tamal.
