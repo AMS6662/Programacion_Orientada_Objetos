@@ -4,4 +4,9 @@
 public class serVivo : MonoBehaviour
 {
 private float vida;
+
+public void ReducirVida()
+{
+;;,
+}
 }
