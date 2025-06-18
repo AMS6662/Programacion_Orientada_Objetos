@@ -14,9 +14,11 @@ Permite que se puedan crear muchas formas o iteraciones del código o su comport
 - Abstracción
 La clase es _Tamal_.
 Sus características son:
-1. Textura
-2. Masa
-3. Color
-4. Ingredientes
+1. Textura.
+2. Masa.
+3. Color.
+4. Ingredientes.
 Su comportamiento es:
-  - Ser comido
+Ser comido
+
+- Herencia
