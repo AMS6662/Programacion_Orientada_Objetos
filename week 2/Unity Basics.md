@@ -21,3 +21,6 @@ Donde se encuentran:
 
 Cuando algo se encuentra en los Assets, es parte del proyecto pero no parte del juego.
 Para que forme parte del juego tiene que ser arrastrado a escena. 
+
+### Cambiar medio para escribir código
+*Preferences > External tools > Visual studio 22*
