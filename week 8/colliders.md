@@ -26,4 +26,5 @@ Para diagnosticar porqué las colisiones no funcionan, se´puede utilizar la sig
 | Item | Static Collider | Dynamic Rigidbody | Kinematic Rigidbody | Static Trigger | Dynamic Trigger | Kynematic Trigger |
 |------| --------------- | ----------------- | ------------------- | -------------- | --------------- | ----------------- |
 | Static Collider | - | Collision | - | - | Trigger | Trigger|
-|--- | --- | --- | --- | --- | --- | --- |
+| Dynamic | Collision | Collision | Collision | Trigger | Trigger | Trigger |
+Kinematic Rigidbody | - | Collision | - | Trigger | Trigger | Trigger|
