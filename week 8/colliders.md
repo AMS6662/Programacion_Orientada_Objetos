@@ -31,3 +31,9 @@ Para diagnosticar porqué las colisiones no funcionan, se´puede utilizar la sig
 |Static Trigger | - | Trigger | Trigger | - | Trigger | Trigger|
 | Dynamic Trigger | Trigger | Trigger | Trigger| Trigger | Trigger | Trigger| 
 | Kinematic Trigger | Trigger | Trigger | Trigger | Trigger | Trigger| Trigger|
+
+## La Bifurcación Fundamental: Eventos de Colisión vs. Eventos de Trigger
+En cada collider se puede marcar activa una casilla _Is Trigger_. IS TRIGGER, es la forma más optimizada de realizar comprobaciones de proximidad. Al marcarla activa, el Collider pasa de ser una barrera física a ser un volumen de detección, que divide todas las interacciones físicas en dos categorías:
+1. **Colisiones (Is Trigger = False):** El Collider actúa como un objeto que tiene presencia física en el mundo. Las interacciones son basadas en las fuerzas como una bala que choca con una pared o un personaje que camina sobre el suelo.
+2. **Colisiones (Is Trigger = TRUE):** El collider se convierte en un "fantasma", ya no impide el paso de otros Colliders. Ahora, su propósito solo es _detectar cuando otros colliders entran, permanecen, o salen de su volumen._
+
