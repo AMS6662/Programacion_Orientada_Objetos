@@ -23,5 +23,7 @@ Su configuración determina su tipo y comportamiento. Existen tres categorías p
 
 Para diagnosticar porqué las colisiones no funcionan, se´puede utilizar la siguiente tabla:
 
-|   | Static Collider | Dynamic Rigidbody | Kinematic Rigidbody | Static Trigger | Dynamic Trigger | Kynematic Trigger |
-|___| ________________| _________________ | ___________________ | ______________ | _______________ | _________________ |
+| Item | Static Collider | Dynamic Rigidbody | Kinematic Rigidbody | Static Trigger | Dynamic Trigger | Kynematic Trigger |
+|------| --------------- | ----------------- | ------------------- | -------------- | --------------- | ----------------- |
+| Static Collider | - | Collision | - | - | Trigger | Trigger|
+|--- | --- | --- | --- | --- | --- | --- |
