@@ -16,7 +16,7 @@ Los _Colliders_ y _Rigidbody_ son la base del sistema de físicas en Unity.
 Su configuración determina su tipo y comportamiento. Existen tres categorías principales:
 1. **Static Collider:** GameObject + Collider.
    Son objetos inamovibles (del escenario) como el suelo, paredes, edificios, etc. Los Rigidbody _dinámicos_ pueden chocar contra ellos pero estos no se moverán.
-3. **Dynamic Rigidbody Collider:** GameObject + Collider + Rigidbody + SIN Kinematic.
+3. **Dynamic Rigidbody Collider:** GameObject + Collider + Rigidbody + SIN is Kinematic.
    Están completamente bajo el control de físicas de Unity. Responden a fuerzas, gravedad, choques y rebotes. Se usan en objetos como pelotas, proyectiles, o escombros.
 5. **Kinematic Rigidbody Collider:** GameObject + Collider + Rigidbody + IS Kinematic.
    No son afectados por fuerzas externas como gravedad o colisiones. Pueden moverse modificando su transform a través de un script. Se usan en personajes controlados por el jugador, puertas, plataformas, etc. con los que se interactuan (como empujar o activar triggers). 
@@ -32,8 +32,22 @@ Para diagnosticar porqué las colisiones no funcionan, se´puede utilizar la sig
 | Dynamic Trigger | Trigger | Trigger | Trigger| Trigger | Trigger | Trigger| 
 | Kinematic Trigger | Trigger | Trigger | Trigger | Trigger | Trigger| Trigger|
 
-## La Bifurcación Fundamental: Eventos de Colisión vs. Eventos de Trigger
+### La Bifurcación Fundamental: Eventos de Colisión vs. Eventos de Trigger
 En cada collider se puede marcar activa una casilla _Is Trigger_. IS TRIGGER, es la forma más optimizada de realizar comprobaciones de proximidad. Al marcarla activa, el Collider pasa de ser una barrera física a ser un volumen de detección, que divide todas las interacciones físicas en dos categorías:
 1. **Colisiones (Is Trigger = False):** El Collider actúa como un objeto que tiene presencia física en el mundo. Las interacciones son basadas en las fuerzas como una bala que choca con una pared o un personaje que camina sobre el suelo.
 2. **Colisiones (Is Trigger = TRUE):** El collider se convierte en un "fantasma", ya no impide el paso de otros Colliders. Ahora, su propósito solo es _detectar cuando otros colliders entran, permanecen, o salen de su volumen._
+
+### Los Seis Eventos de Físicas
+Existen seis metodos de mensaje principales divididos en dos grupos.
+ #### Grupo 1: Eventos de Colisión (Física Real)
+ Sucede cuando dos Colliders con _Is Trigger DESACTIVADO_ interactúan, y al menos uno de ellos tiene un Rigidbody *dinámico*.
+ - **OnCollisionEnter:** Contiene info detallada sobre el choque como puntos de contacto exactos, velocidad relativa del impacto, referencias directas al otro GameObject, Collider y Rigidbody involucrados.
+      - _Usos típicos_: Aplicar daño instantaneo por impacto, reproducir sonido de choque, crear un efecto de partículas en el punto de colisión-
+- **OnCollisionStay:** Invoca un ciclo de FixedUpdate mientras los dos Colliders estén en contacto.
+     - _Usos típicos:_ Aplicar una fuerza de fricción, simular que un objeto está siendo
+aplastado por otro, empujar un objeto móvil.
+- **OnCollisionExit:** Se invoca una única vez en el frame en que los colliders dejan de tocarse. Marca el final de la interacción física.
+     - _Usos típicos:_ Dejar de aplicar un efecto de fricción, cambiar el estado de un
+personaje (por ejemplo, de "en el suelo" a "en el aire" cuando salta), restablecer
+una variable.
 
