@@ -27,4 +27,7 @@ Para diagnosticar porqué las colisiones no funcionan, se´puede utilizar la sig
 |------| --------------- | ----------------- | ------------------- | -------------- | --------------- | ----------------- |
 | Static Collider | - | Collision | - | - | Trigger | Trigger|
 | Dynamic | Collision | Collision | Collision | Trigger | Trigger | Trigger |
-Kinematic Rigidbody | - | Collision | - | Trigger | Trigger | Trigger|
+|Kinematic Rigidbody | - | Collision | - | Trigger | Trigger | Trigger|
+|Static Trigger | - | Trigger | Trigger | - | Trigger | Trigger|
+| Dynamic Trigger | Trigger | Trigger | Trigger| Trigger | Trigger | Trigger| 
+| Kinematic Trigger | Trigger | Trigger | Trigger | Trigger | Trigger| Trigger|
