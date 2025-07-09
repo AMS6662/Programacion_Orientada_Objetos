@@ -39,7 +39,7 @@ En cada collider se puede marcar activa una casilla _Is Trigger_. IS TRIGGER, es
 
 ### Los Seis Eventos de Físicas
 Existen seis metodos de mensaje principales divididos en dos grupos.
- #### Grupo 1: Eventos de Colisión (Física Real)
+ #### Grupo 1: Eventos de Colisión (Física Real) (is trigger OFF, (Collision collisionInfo))
  Sucede cuando dos Colliders con _Is Trigger DESACTIVADO_ interactúan, y al menos uno de ellos tiene un Rigidbody *dinámico*.
  - **OnCollisionEnter:** Contiene info detallada sobre el choque como puntos de contacto exactos, velocidad relativa del impacto, referencias directas al otro GameObject, Collider y Rigidbody involucrados.
       - _Usos típicos_: Aplicar daño instantaneo por impacto, reproducir sonido de choque, crear un efecto de partículas en el punto de colisión-
@@ -51,3 +51,16 @@ aplastado por otro, empujar un objeto móvil.
 personaje (por ejemplo, de "en el suelo" a "en el aire" cuando salta), restablecer
 una variable.
 
+#### Grupo 2: Eventos de TRigger (Detección de zona) (is TRigger ON, (Collider other))
+Suceden cuando el Collider entra en contacto con un Collider con _is Trigger ACTIVADO_. Al menos uno de los objetos debe tener un _Rigidbody_.
+- **OnTriggerEnter:** Se invoca una unica vez en el momento en que un Collider entra en el volumen del trigger. El parametro _Other_ es una referencia simple y directa al Collider del objeto que ha entrado.
+     - _Usos típicos:_ Recoger un item, activar una puerta, iniciar un diálogo o misión entrar en una zona que cambia la música de fondo.
+- **OnTriggerSTay:** Se invoca en cada ciclo de FixedUpdate  mientras un
+Collider permanezca dentro del volumen del trigger. Es la base para efectos que duran
+mientras el jugador está en una zona específica.
+○ Usos Típicos: Aplicar daño por segundo en una zona de veneno o lava, curar
+gradualmente en un área sagrada, hacer que un objeto levite mientras está sobre
+una plataforma de energía.
+● OnTriggerExit(Collider other): Se invoca una única vez, en el momento en que el Collider
+sale del volumen del trigger.
+○ Usos Típicos: Desactivar la puerta automática, detener e
