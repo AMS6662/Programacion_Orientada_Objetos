@@ -20,3 +20,8 @@ Su configuración determina su tipo y comportamiento. Existen tres categorías p
    Están completamente bajo el control de físicas de Unity. Responden a fuerzas, gravedad, choques y rebotes. Se usan en objetos como pelotas, proyectiles, o escombros.
 5. **Kinematic Rigidbody Collider:** GameObject + Collider + Rigidbody + IS Kinematic.
    No son afectados por fuerzas externas como gravedad o colisiones. Pueden moverse modificando su transform a través de un script. Se usan en personajes controlados por el jugador, puertas, plataformas, etc. con los que se interactuan (como empujar o activar triggers). 
+
+Para diagnosticar porqué las colisiones no funcionan, se´puede utilizar la siguiente tabla:
+
+|   | Static Collider | Dynamic Rigidbody | Kinematic Rigidbody | Static Trigger | Dynamic Trigger | Kynematic Trigger |
+|___| ________________| _________________ | ___________________ | ______________ | _______________ | _________________ |
