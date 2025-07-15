@@ -51,16 +51,16 @@ aplastado por otro, empujar un objeto móvil.
 personaje (por ejemplo, de "en el suelo" a "en el aire" cuando salta), restablecer
 una variable.
 
-#### Grupo 2: Eventos de TRigger (Detección de zona) (is TRigger ON, (Collider other))
+#### Grupo 2: Eventos de TRigger (Detección de zona) (is Trigger ON, (Collider other))
 Suceden cuando el Collider entra en contacto con un Collider con _is Trigger ACTIVADO_. Al menos uno de los objetos debe tener un _Rigidbody_.
 - **OnTriggerEnter:** Se invoca una unica vez en el momento en que un Collider entra en el volumen del trigger. El parametro _Other_ es una referencia simple y directa al Collider del objeto que ha entrado.
      - _Usos típicos:_ Recoger un item, activar una puerta, iniciar un diálogo o misión entrar en una zona que cambia la música de fondo.
-- **OnTriggerSTay:** Se invoca en cada ciclo de FixedUpdate  mientras un
+- **OnTriggerSTay:** Se invoca en cada ciclo de _FixedUpdate_ mientras un
 Collider permanezca dentro del volumen del trigger. Es la base para efectos que duran
 mientras el jugador está en una zona específica.
-○ Usos Típicos: Aplicar daño por segundo en una zona de veneno o lava, curar
+   - Usos Típicos: Aplicar daño por segundo en una zona de veneno o lava, curar
 gradualmente en un área sagrada, hacer que un objeto levite mientras está sobre
 una plataforma de energía.
-● OnTriggerExit(Collider other): Se invoca una única vez, en el momento en que el Collider
-sale del volumen del trigger.
-○ Usos Típicos: Desactivar la puerta automática, detener e
+- **OnTriggerExit:** Se invoca una única vez, en el momento _en que el Collider
+sale del volumen del trigger_.
+   - _Usos Típicos:_ Desactivar la puerta automática, detener el daño por segundo de una zona de veneno o restaurar la música de fondo normal.
