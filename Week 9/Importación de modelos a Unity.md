@@ -28,3 +28,17 @@ Esto permite hacer modificaciones a las texturas y los UVs.
 1. Seleccionar una animación de Mixamo
 2. Download > Without Skin > Select fps.
 3. Drag and drop file to an Animations folder in Unity.
+
+### Inspector
+En el asset de la animación:
+#### Rig
+1. Animation Type: Humanoid (o Generic si el modelo lo requiere).
+
+#### Animation
+Después de que se ha creado el Rig, **activar**:
+- Loop time
+- Root Transform Rotation > Bake Into Pose
+- Root Tranform Position Y > Bake Into Pose
+- Root Transform Position XZ > Bake Into Pose
+Click **Apply**.
+
