@@ -37,12 +37,15 @@ En el asset de la animación:
 #### Animation
 Después de que se ha creado el Rig, **activar**:
 - Loop time
-- Root Transform Rotation > Bake Into Pose
-- Root Tranform Position Y > Bake Into Pose
-- Root Transform Position XZ > Bake Into Pose
+- Root Transform Rotation > Bake Into Pose. 
+- Root Tranform Position Y > Bake Into Pose.
+- Root Transform Position XZ > Bake Into Pose.
 Click **Apply**.
 
-### Animation Controller
+**Nota:**
+Bake Into Pose es utilizado cuando las animaciones serán llamadas por medio de un código, no cuando estarán reproduciendose constantemente. Un ejemplo de cuando Bake Into Pose **NO** es necesario, es Subway Surfers pues en este caso la animación siempre se está reproduciendo, el código solo cambia la posición en que se encuentra en XYZ. 
+
+## Animation Controller
 1. Crear nueva carpeta para Animation Controllers.
 2. Create > Animation Controller
 3. En el objeto de modelo (el objeto que aparece en _Hierarchy_) > Inspector > Animator > Controller > **Asignar el Controller que se creó específicamente para esta animación**.
