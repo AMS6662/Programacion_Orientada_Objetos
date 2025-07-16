@@ -19,6 +19,7 @@ Consideraciones generales: Asegurarse de que la escala del modelo corresponda co
   - Humanoid: Herencia de animaciones.
 
 #### Material
-1. Import Textures
-2. Import Materials.
+1. Material Creation Mode: Standard permite los reflejos de las luces.
+2. Import Textures
+3. Import Materials.
 Esto permite hacer modificaciones a las texturas y los UVs.
