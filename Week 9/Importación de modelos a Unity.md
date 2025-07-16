@@ -42,7 +42,7 @@ Después de que se ha creado el Rig, **activar**:
 - Root Transform Position XZ > Bake Into Pose
 Click **Apply**.
 
-#### Animation Controller
+### Animation Controller
 1. Crear nueva carpeta para Animation Controllers.
 2. Create > Animation Controller
 3. En el objeto de modelo (el objeto que aparece en _Hierarchy_) > Inspector > Animator > Controller > **Asignar el Controller que se creó específicamente para esta animación**.
