@@ -57,5 +57,12 @@ Para revisar las animaciones:
 - Seleccionar Camara > Ctrl + Shift + F (sets Main Camera en la misma posición que la vista que tenemos en Scene).
 - Enter Play Test Mode to see the animations.
 
+### Crear Transiciones
+1. Una vez que todas las animaciones fueron agregadas al Animation Controller, seleccionar la Animación inicial o base Layer (por ejemplo, Idle) > clic derecho > Make Transition.
+  - Por ejemplo, Idle -> Walk -> Run.
+2. Repetir este proceso, pero de regreso, de modo que las Transiciones puedan suceder en ambos sentidos.
+  - Por ejemplo, Idle <- Walk <- Run.
+3. 
+
 
 
