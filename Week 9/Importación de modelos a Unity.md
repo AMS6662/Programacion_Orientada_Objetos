@@ -68,13 +68,11 @@ Este parametro servirá para crear una base bajo la cual el código podrá saber
 4. Click on the Transition arrows between the transitions.
 5. Check _OFF_ Has Exit Time.
 6. Conditions > Add New > velocity.
-Al ser una variable tipo Float, este parametro se maneja en comparativas.
+Al ser una variable tipo Float, este parametro se maneja en comparativas. Con este proceso, las transiciones se harán basadas en el valor que esté asignado al parámetro (en este ejemplo, _velocity_).
   - Por ejemplo:
       - Idle -> Walk: velocity _Greater than_ 0.1.
       - Idle <- Walk: celovity _Less than_ 0.1.
       - Walk -> Run: velocity _Greater than_ 1.
       - Walk <- Run: velocity _LESS than_ 1.
-Con este proceso, las transiciones se harán basadas en el valor que esté asignad a velocity.
-
 
 
