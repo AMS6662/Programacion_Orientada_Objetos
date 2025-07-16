@@ -23,3 +23,8 @@ Consideraciones generales: Asegurarse de que la escala del modelo corresponda co
 2. Import Textures
 3. Import Materials.
 Esto permite hacer modificaciones a las texturas y los UVs.
+
+## Adding Animations
+1. Seleccionar una animación de Mixamo
+2. Download > Without Skin > Select fps.
+3. Drag and drop file to an Animations folder in Unity.
