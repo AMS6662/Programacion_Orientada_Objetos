@@ -46,6 +46,13 @@ Click **Apply**.
 1. Crear nueva carpeta para Animation Controllers.
 2. Create > Animation Controller
 3. En el objeto de modelo (el objeto que aparece en _Hierarchy_) > Inspector > Animator > Controller > **Asignar el Controller que se creó específicamente para esta animación**.
+4. Double clic on the Controller (open it) > Drag and drop the animation into the diagram
+5. Todas las animaciones deben ser asignadas al mismo Controller.
+
+Para revisar las animaciones:
+- Acomodar la vista del Scene a como queremos ver el personaje en Play Test Mode.
+- Seleccionar Camara > Ctrl + Shift + F (sets Main Camera en la misma posición que la vista que tenemos en Scene).
+- Enter Play Test Mode to see the animations.
 
 
 
